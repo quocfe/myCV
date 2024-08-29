@@ -1,11 +1,4 @@
-import {
-	About,
-	Experience,
-	Footer,
-	Header,
-	Profile,
-	Project,
-} from './components';
+import { About, Experience, Header, Profile, Project } from './components';
 import Contact from './components/Contact/Contact';
 
 function App() {

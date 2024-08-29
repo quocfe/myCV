@@ -1,5 +1,3 @@
-import phoneImg from '../../assets/phone-svgrepo-com.png';
-
 function Contact() {
 	return (
 		<section id="contact" className="pt-8 mx-8 mb-24 lg:mx-32">
