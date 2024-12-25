@@ -1,4 +1,5 @@
 import { CreditCardIcon, MapIcon } from '@heroicons/react/24/outline';
+import { emailImage, githubImage, linkedinImage } from '../../assets';
 
 function About() {
 	return (
@@ -33,24 +34,18 @@ function About() {
 				</div>
 				<div className="mb-2">
 					<p>
-						<strong>Front-end: </strong> I have experience working with NextJS,
-						Hook, Redux Toolkit ...
+						<strong>Front-end: </strong> I have experience working with ReactJS,
+						Tailwind Hook, Redux...
 					</p>
 				</div>
 			</div>
 			<div className="mb-6">
 				<div className="flex gap-2 items-center">
-					<img
-						src="src\assets\images\gmail-svgrepo-com.png"
-						className="w-5 h-5"
-					/>
+					<img src={emailImage} className="w-5 h-5" />
 					<p>phuquocfe@gmail.com</p>
 				</div>
 				<div className="flex gap-2 items-center">
-					<img
-						src="src\assets\images\linkedin-svgrepo-com.png"
-						className="w-5 h-5"
-					/>
+					<img src={linkedinImage} className="w-5 h-5" />
 					<a
 						className="underline"
 						target="_blank"
@@ -60,10 +55,7 @@ function About() {
 					</a>
 				</div>
 				<div className="flex gap-2 items-center">
-					<img
-						src="src\assets\images\github-142-svgrepo-com.png"
-						className="w-5 h-5"
-					/>
+					<img src={githubImage} className="w-5 h-5" />
 					<a
 						className="underline"
 						target="_blank"

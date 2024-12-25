@@ -17,6 +17,10 @@ function App() {
 			setCurrentHash(window.location.hash); // Cập nhật hash mới
 		};
 
+		if (!window.location.hash) {
+			window.location.hash = 'aboutme';
+		}
+
 		// Thêm event listener cho hashchange
 		window.addEventListener('hashchange', handleHashChange);
 
