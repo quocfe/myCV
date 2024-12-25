@@ -3,3 +3,12 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+	@apply text-primary;
+}
+
+.active {
+	color: white;
+	font-weight: bold;
+}

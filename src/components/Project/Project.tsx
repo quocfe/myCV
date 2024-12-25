@@ -1,174 +1,196 @@
-import { useState } from 'react';
+import { BookmarkIcon } from '@heroicons/react/24/solid';
+import HSection from '../HSection/HSection';
+import HeaderProject from './components/HeaderProject';
 
 function Project() {
-	const [showDes, setShowDes] = useState<boolean>(true);
-	const [showDes1, setShowDes1] = useState<boolean>(true);
+	// const [showDes, setShowDes] = useState<boolean>(true);
+	// const [showDes1, setShowDes1] = useState<boolean>(true);
 	return (
-		<section id="project" className="pt-8 mx-8 mb-24 lg:mx-32">
-			<div className="leading-normal text-center ">
-				<h1 className="text-5xl font-bold ">Projects</h1>
-			</div>
-			<div className="flex flex-col flex-wrap gap-10 mt-8 md:flex-row">
-				<div className="flex items-center justify-center flex-col text-center bg-white flex-1 p-6 rounded-[32px] border border-[#a3a3a3]">
-					<h2 className="mt-3 text-[22px] font-bold">
-						Social Media Web Application
-					</h2>
-					<p className="text-[#55555] mb-3">Jun-2024 - Sep-2024</p>
-					{showDes ? (
-						<div className="w-[90%] h-[90%] text-left">
-							<div>
-								<h3>
-									<strong className="font-semibold">Team Size:</strong> 5
-								</h3>
-								<p>
-									<strong className="font-semibold">Technologies:</strong>{' '}
-									ReactJs, Nodejs, Socket.io, MySQL, Typescript
-								</p>
-								<p>
-									<strong className="font-semibold">Description:</strong>{' '}
-									Developed a social media platform that enables users to
-									interact with each other through posts, friend connections,
-									and messaging.
-								</p>
-								<p>
-									<strong className="font-semibold">Role:</strong> Messaging
-									Feature
-								</p>
-								<ul className="ml-4 list-disc">
-									<li>Designed the database structure </li>
-									<li>
-										Develop the backend with NodeJS, create RESTful APIs to
-										communicate with the frontend.
-									</li>
-									<li>Implemented real-time chat using Socket.IO.</li>
-									<li>
-										Developed core messaging functionalities, including:
-										<ul>
-											<li>Sending and replying to messages.</li>
-											<li>
-												Sending attachments such as images, videos, and files.
-											</li>
-											<li>Recording and sending voice messages.</li>
-										</ul>
-									</li>
-									<li>
-										Implemented video calling feature using WebRTC for real-time
-										communication
-									</li>
-								</ul>
-								<p>
-									<strong className="font-semibold">Link:</strong>
-								</p>
-								<ul>
-									<li>
-										<a href="https://github.com/quocfe/FE-DATN" target="_blank">
-											Source code frontend
-										</a>
-									</li>
-									<li>
-										<a href="https://github.com/quocfe/BE-DATN" target="_blank">
-											Source code backend
-										</a>
-									</li>
-								</ul>
-							</div>
-						</div>
-					) : (
-						<video
-							controls
-							src="https://res.cloudinary.com/dilajt5zl/video/upload/v1724910581/mz2i0jyejybv5brsaino.mp4"
-							className="w-[90%] h-[90%] rounded-2xl"
-						/>
-					)}
-
-					<div className="flex flex-wrap items-center justify-center flex-1 gap-2 mt-5">
-						<button className="w-32 btn border border-[#353535] py-3 px-6 rounded-full font-semibold transition-all duration-300 ease-in-out hover:bg-[#353535] hover:text-white text-[13px] flex-shrink-0">
-							Github
-						</button>
-						<button
-							onClick={() => setShowDes(!showDes)}
-							className="w-32 btn border border-[#353535] py-3 px-6 rounded-full font-semibold transition-all duration-300 ease-in-out hover:bg-[#353535] hover:text-white text-[13px] flex-shrink-0"
-						>
-							{!showDes ? 'Description' : 'Demo'}
-						</button>
-					</div>
+		<section id="projects" className="p-12 border-b">
+			<HSection>Projects</HSection>
+			<div className="mb-6">
+				<HeaderProject
+					title="Powerkeentrend"
+					positon="Back-end developer"
+					time="10/2024 - 12/2024"
+					className="mb-3"
+				/>
+				<div className="flex items-start gap-1 ">
+					<BookmarkIcon className="size-5 text-yellow-400" />
+					<HeaderProject
+						title="Powerkeentrend (Team size 2): freelancer"
+						sub={true}
+					/>
 				</div>
-				<div className="flex items-center justify-center flex-col text-center bg-white flex-1 p-6 rounded-[32px] border border-[#a3a3a3]">
-					<h2 className="mt-3 text-[22px] font-bold">Book Website Review</h2>
-					<p className="text-[#55555] mb-3">Otc-2023 - Dec-2023</p>
-					{showDes1 ? (
-						<div className="w-[90%] h-[90%] text-left">
-							<div>
-								<h3>
-									<strong className="font-semibold">Team Size:</strong> 1
-								</h3>
-								<p>
-									<strong className="font-semibold">Technologies:</strong>{' '}
-									Node.js, MySQL, JSON Web Token (JWT), React.js, Redux
-								</p>
-								<p>
-									<strong className="font-semibold">Description:</strong>{' '}
-									Provided a platform for book readers to view book reviews
-									before making a purchase decision.
-								</p>
-								<p>
-									<strong className="font-semibold">Role:</strong> Full Stack
-								</p>
-								<ul className="ml-4 list-disc">
-									<li>Designed the database structure</li>
-									<li>
-										Developed the backend with Node.js and created RESTful APIs
-										to facilitate communication with the frontend.
-									</li>
-									<li>
-										Designed the frontend using React.js and managed the
-										application state with Redux.
-									</li>
-									<li>
-										Developed core functionalities, including:
-										<ul>
-											<li>
-												User: Login and register. View books and read reviews.
-												Write comments and rate books.
-											</li>
-											<li>Admin: Manage books and reviews.</li>
-										</ul>
-									</li>
-								</ul>
-								<p>
-									<strong className="font-semibold">Link:</strong>
-								</p>
-								<ul>
-									<li>
-										<a
-											href=" https://github.com/quocfe/BookStoreNodeJs/"
-											target="_blank"
-										>
-											Source code
-										</a>
-									</li>
-								</ul>
-							</div>
-						</div>
-					) : (
-						<video
-							controls
-							src="https://res.cloudinary.com/dilajt5zl/video/upload/v1724911504/jmcin5w0wryzgkgpipcm.mp4"
-							className="w-[90%] h-[90%] rounded-2xl"
-						/>
-					)}
-
-					<div className="flex flex-wrap items-center justify-center flex-1 gap-2 mt-5">
-						<button className="w-32 btn border border-[#353535] py-3 px-6 rounded-full font-semibold transition-all duration-300 ease-in-out hover:bg-[#353535] hover:text-white text-[13px] flex-shrink-0">
-							Github
-						</button>
-						<button
-							onClick={() => setShowDes1(!showDes1)}
-							className="w-32 btn border border-[#353535] py-3 px-6 rounded-full font-semibold transition-all duration-300 ease-in-out hover:bg-[#353535] hover:text-white text-[13px] flex-shrink-0"
-						>
-							{!showDes1 ? 'Description' : 'Demo'}
-						</button>
-					</div>
+				<div>
+					<p className="indent-6">
+						<strong className="font-bold">Overview: </strong> E-commerce website
+						selling hair wax
+					</p>
+				</div>
+				<div>
+					<p className="indent-6">
+						<strong className="font-bold">Technologies: </strong>
+					</p>
+					<ul className="list-disc ml-10">
+						<li>Back-end: NestJS, Redis, BullMq, Sequelize ORM.</li>
+						<li>Database: MySQL</li>
+					</ul>
+				</div>
+				<div>
+					<p className="indent-6">
+						<strong className="font-bold">Responsibility:</strong>
+					</p>
+					<ul className="list-disc ml-10">
+						<li>Build and develop API with NestJs..</li>
+						<li>
+							Implemented database schema using Prisma ORM and MySQL, optimizing
+							data relationships for product categories, orders, and users.
+						</li>
+						<li>
+							Developed secure user authentication and authorization workflows
+							with JWT, supporting role-based access control (super-admin,
+							management, customer).
+						</li>
+						<li>Integrated Cloudinary for product image storage</li>
+						<li>Designed and implemented a background email queue</li>
+						<li>
+							Build a cms system to manage products, product categories, orders,
+							and users
+						</li>
+					</ul>
+				</div>
+				<div>
+					<p className="indent-6">
+						<strong className="font-bold">Link:</strong>
+					</p>
+					<ul className="list-disc ml-10">
+						<li>github...</li>
+					</ul>
+				</div>
+			</div>
+			<div className="mb-6">
+				<HeaderProject
+					title="DevBook"
+					positon="Full-stack developer "
+					time="05/2024 - 09/2024"
+					className="mb-3"
+				/>
+				<div className="flex items-start gap-1 ">
+					<BookmarkIcon className="size-5 text-yellow-400" />
+					<HeaderProject
+						title="DevBook (Team size 5): graduation project"
+						sub={true}
+					/>
+				</div>
+				<div>
+					<p className="indent-6">
+						<strong className="font-bold">Overview: </strong> Develop a social
+						media platform that allows users to interact through posts, connect
+						with friends, and send messages.
+					</p>
+				</div>
+				<div>
+					<p className="indent-6">
+						<strong className="font-bold">Technologies: </strong>
+					</p>
+					<ul className="list-disc ml-10">
+						<li>Back-end: Node.js, ExpressJS, Sequelize ORM.</li>
+						<li>Front-end: React.js, Zustand ...</li>
+						<li>Database: MySQL</li>
+						<li>Real-time Features: Socket.IO, WebRTC</li>
+						<li>Others: JWT, Cloudinary (media storage).</li>
+					</ul>
+				</div>
+				<div>
+					<p className="indent-6">
+						<strong className="font-bold">Responsibility:</strong> I'm
+						responsible for developing message feature with ReactJS, Nodejs, and
+						other technologies.
+					</p>
+					<ul className="list-disc ml-10">
+						<li>Developed messaging API and designed the database</li>
+						<li>
+							Implemented real-time messaging with Socket.IO (messages,
+							attachments, voice messages, video calls)
+						</li>
+						<li>
+							Integrated user status (online/offline) and media handling
+							(images, videos)
+						</li>
+						<li>Built video call functionality using WebRTC</li>
+					</ul>
+				</div>
+				<div>
+					<p className="indent-6">
+						<strong className="font-bold">Link:</strong>
+					</p>
+					<ul className="list-disc ml-10">
+						<li>github...</li>
+					</ul>
+				</div>
+			</div>
+			<div className="mb-6">
+				<HeaderProject
+					title="Book Review Website"
+					positon="Full-stack developer"
+					time="10/2023 - 12/2023"
+					className="mb-3"
+				/>
+				<div className="flex items-start gap-1 ">
+					<BookmarkIcon className="size-5 text-yellow-400" />
+					<HeaderProject
+						title="Social Media Web Application (Team size 1): personal project"
+						sub={true}
+					/>
+				</div>
+				<div>
+					<p className="indent-6">
+						<strong className="font-bold">Overview: </strong> Provide a platform
+						for book readers to view reviews before deciding to buy.
+					</p>
+				</div>
+				<div>
+					<p className="indent-6">
+						<strong className="font-bold">Technologies: </strong>
+					</p>
+					<ul className="list-disc ml-10">
+						<li>Back-end: Express.js, Mysql2</li>
+						<li>Database: Mysql</li>
+					</ul>
+				</div>
+				<div>
+					<p className="indent-6">
+						<strong className="font-bold">Responsibility:</strong> I'm
+						responsible for developing full websites with ReactJS, Nodejs, and
+						other
+					</p>
+					<ul className="list-disc ml-10">
+						<li>
+							Develop the backend using Node.js and create RESTful APIs to
+							communicate with the frontend.
+						</li>
+						<li>
+							Design the frontend interface with React.js and manage application
+							state using Redux.
+						</li>
+						<li>
+							Developed secure user authentication and authorization workflows
+							with JWT
+						</li>
+						<li>
+							Build a cms system to manage products, product categories,
+							comments, and users
+						</li>
+					</ul>
+				</div>
+				<div>
+					<p className="indent-6">
+						<strong className="font-bold">Link:</strong>
+					</p>
+					<ul className="list-disc ml-10">
+						<li>github...</li>
+					</ul>
 				</div>
 			</div>
 		</section>

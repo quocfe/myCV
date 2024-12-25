@@ -1,4 +1,3 @@
-import cv from '../../assets/NguyenPhuQuoc.pdf';
 function Profile() {
 	return (
 		<section id="profile" className="pt-8 mx-8 mb-24 lg:mx-32">
@@ -30,7 +29,7 @@ function Profile() {
 				hover:bg-[#353535] hover:text-white
 				cursor-pointer
 				"
-					href={cv}
+					href=""
 					download
 				>
 					Download CV
