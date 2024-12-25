@@ -4,14 +4,13 @@ import useViewport from '../../hooks/useViewPort';
 
 const TitleArr = [
 	{ title: 'About Me', ref: '#aboutme' },
-	{ title: 'Experience', ref: '#experience' },
 	{ title: 'Projects', ref: '#projects' },
 	{ title: 'Skills', ref: '#skills' },
 	{ title: 'Education', ref: '#education' },
 	{ title: 'Interests', ref: '#interests' },
 ];
 
-function SideBar({ hash }: { hash: string }) {
+function SideBar({ hash = '#aboutme' }: { hash: string }) {
 	const { width } = useViewport();
 	const [active, setActive] = useState<boolean>(false);
 	const [isMobile, setIsMobile] = useState<boolean>(width < 1024);
