@@ -16,10 +16,15 @@ const IconArr = [
 
 function LanguagesAndTool() {
 	return (
-		<div className="flex flex-wrap gap-6 mb-5">
-			{IconArr.map((icon, index) => (
-				<i key={index} className={`${icon} colored text-[50px]`}></i>
-			))}
+		<div className="mb-3">
+			<h4 className="mb-5 text-[22px] font-bold">
+				Programming Languages & Tools
+			</h4>
+			<div className="flex flex-wrap gap-6 mb-5">
+				{IconArr.map((icon, index) => (
+					<i key={index} className={`${icon} colored text-[50px]`}></i>
+				))}
+			</div>
 		</div>
 	);
 }

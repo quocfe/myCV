@@ -1,46 +1,75 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import {
 	About,
-	Awards,
-	Education,
 	Project,
 	SideBar,
 	Skills,
+	Education,
+	Interests,
 } from './components';
+import ContentPage from './page/ContentPage';
+// import Education from './components/Education/Education';
 
+const sections = [
+	{ id: 'about', label: 'About', component: <About /> },
+	{ id: 'projects', label: 'Projects', component: <Project /> },
+	{ id: 'skills', label: 'Skills', component: <Skills /> },
+	{ id: 'education', label: 'Education', component: <Education /> },
+	{ id: 'interests', label: 'Interests', component: <Interests /> },
+];
 function App() {
-	const [currentHash, setCurrentHash] = useState(window.location.hash);
+	const [currentHash, setCurrentHash] = useState<string>(window.location.hash);
+	const sectionRefs = useRef<HTMLDivElement[]>([]); // Lưu trữ các tham chiếu đến các section
 
 	useEffect(() => {
-		// Hàm xử lý khi hash thay đổi
-		const handleHashChange = () => {
-			setCurrentHash(window.location.hash); // Cập nhật hash mới
-		};
+		const observer = new IntersectionObserver(
+			(entries) => {
+				entries.forEach((entry) => {
+					if (entry.isIntersecting) {
+						// Khi section xuất hiện trên màn hình, cập nhật currentHash
+						const id = entry.target.getAttribute('id');
+						if (id) setCurrentHash(id);
+					}
+				});
+			},
+			{
+				root: null, // Quan sát trong viewport
+				threshold: 0.2,
+			}
+		);
 
-		if (!window.location.hash) {
-			window.location.hash = 'aboutme';
-		}
+		// Gắn observer vào các section
+		sectionRefs.current.forEach((section) => {
+			if (section) observer.observe(section);
+		});
 
-		// Thêm event listener cho hashchange
-		window.addEventListener('hashchange', handleHashChange);
-
-		// Dọn dẹp sự kiện khi component bị unmount
+		// Dọn dẹp observer khi component bị unmount
 		return () => {
-			window.removeEventListener('hashchange', handleHashChange);
+			sectionRefs.current.forEach((section) => {
+				if (section) observer.unobserve(section);
+			});
 		};
 	}, []);
 
+	// eslint-disable-next-line react-hooks/exhaustive-deps
+
+	const handleScroll = (id: string) => {
+		const targetSection = sectionRefs.current.find(
+			(section) => section?.id === id
+		);
+		if (targetSection) {
+			targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+		}
+	};
+
 	return (
 		<div className="font-roboto font-[300] scroll-smooth">
-			<SideBar hash={currentHash} />
-			<div className="lg:ml-[300px]">
-				<About />
-				{/* <Experience /> */}
-				<Project />
-				<Skills />
-				<Education />
-				<Awards />
-			</div>
+			<SideBar
+				currentHash={currentHash}
+				sections={sections}
+				onScroll={handleScroll}
+			/>
+			<ContentPage sections={sections} sectionRefs={sectionRefs} />
 		</div>
 	);
 }

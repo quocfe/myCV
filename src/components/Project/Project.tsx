@@ -6,7 +6,7 @@ function Project() {
 	// const [showDes, setShowDes] = useState<boolean>(true);
 	// const [showDes1, setShowDes1] = useState<boolean>(true);
 	return (
-		<section id="projects" className="p-12 border-b">
+		<section className="p-12 border-b">
 			<HSection>Projects</HSection>
 			<div className="mb-6">
 				<HeaderProject
@@ -14,6 +14,7 @@ function Project() {
 					positon="Back-end developer"
 					time="10/2024 - 12/2024"
 					className="mb-3"
+					href="https://powerkeentrend.com/"
 				/>
 				<div className="flex items-start gap-1 ">
 					<BookmarkIcon className="size-5 text-yellow-400" />
@@ -62,10 +63,21 @@ function Project() {
 				</div>
 				<div>
 					<p className="indent-6">
-						<strong className="font-bold">Link:</strong>
+						<strong className="font-bold">Demo:</strong>
 					</p>
 					<ul className="list-disc ml-10">
-						<li>github...</li>
+						<li>
+							<strong>Website: </strong>
+							<a href="https://powerkeentrend.com/" target="_blank">
+								https://powerkeentrend.com/
+							</a>
+						</li>
+						<li>
+							<strong>Api: </strong>
+							<a href="https://powerkeentrend.com/api-docs" target="_blank">
+								https://powerkeentrend.com/api-docs
+							</a>
+						</li>
 					</ul>
 				</div>
 			</div>
@@ -123,10 +135,21 @@ function Project() {
 				</div>
 				<div>
 					<p className="indent-6">
-						<strong className="font-bold">Link:</strong>
+						<strong className="font-bold">Github: </strong>
 					</p>
 					<ul className="list-disc ml-10">
-						<li>github...</li>
+						<li>
+							<strong>FE: </strong>
+							<a target="_blank" href="https://github.com/quocfe/FE-DATN">
+								https://github.com/quocfe/FE-DATN
+							</a>
+						</li>
+						<li>
+							<strong>BE: </strong>
+							<a target="_blank" href="https://github.com/quocfe/BE-DATN">
+								https://github.com/quocfe/BE-DATN
+							</a>
+						</li>
 					</ul>
 				</div>
 			</div>
@@ -136,6 +159,7 @@ function Project() {
 					positon="Full-stack developer"
 					time="10/2023 - 12/2023"
 					className="mb-3"
+					href="https://bookstore-frontend-wheat.vercel.app/"
 				/>
 				<div className="flex items-start gap-1 ">
 					<BookmarkIcon className="size-5 text-yellow-400" />
@@ -186,10 +210,96 @@ function Project() {
 				</div>
 				<div>
 					<p className="indent-6">
-						<strong className="font-bold">Link:</strong>
+						<strong className="font-bold">Demo</strong>
 					</p>
 					<ul className="list-disc ml-10">
-						<li>github...</li>
+						<li>
+							<strong>Website: </strong>{' '}
+							<a
+								href="https://bookstore-frontend-wheat.vercel.app/"
+								target="_blank"
+							>
+								https://bookstore-frontend-wheat.vercel.app/
+							</a>
+						</li>
+						<li>
+							<strong>API: </strong>{' '}
+							<a
+								href="https://bookstore-backend-5eas.onrender.com/api-docs/"
+								target="_blank"
+							>
+								https://bookstore-backend-5eas.onrender.com/api-docs/
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div className="mb-6">
+				<HeaderProject
+					title="Chat App"
+					positon="Full-stack developer"
+					time="5/2023 - 6/2023"
+					className="mb-3"
+					href="https://chat-app-fe-green.vercel.app/"
+				/>
+				<div className="flex items-start gap-1 ">
+					<BookmarkIcon className="size-5 text-yellow-400" />
+					<HeaderProject
+						title="Chat App (Team size 1): personal project"
+						sub={true}
+					/>
+				</div>
+				<div>
+					<p className="indent-6">
+						<strong className="font-bold">Overview: </strong> Provides a
+						real-time messaging platform.
+					</p>
+				</div>
+				<div>
+					<p className="indent-6">
+						<strong className="font-bold">Technologies: </strong>
+					</p>
+					<ul className="list-disc ml-10">
+						<li>Front-end: React.js, Redux, Axios, Socket.IO ...</li>
+						<li>Back-end: Express.js, Mongoose</li>
+						<li>Database: MongoDB</li>
+					</ul>
+				</div>
+				<div>
+					<p className="indent-6">
+						<strong className="font-bold">Responsibility:</strong> I'm
+						responsible for developing full websites with ReactJS, Nodejs, and
+						other
+					</p>
+					<ul className="list-disc ml-10">
+						<li>
+							Develop the backend using Node.js and create RESTful APIs to
+							communicate with the frontend.
+						</li>
+						<li>
+							Design the frontend interface with React.js and manage application
+							state using Redux.
+						</li>
+						<li>real-time messaging with socket</li>
+					</ul>
+				</div>
+				<div>
+					<p className="indent-6">
+						<strong className="font-bold">Demo</strong>
+					</p>
+					<ul className="list-disc ml-10">
+						<li>
+							<strong>Website: </strong>{' '}
+							<a href="https://chat-app-fe-green.vercel.app/" target="_blank">
+								https://chat-app-fe-green.vercel.app/
+							</a>
+						</li>
+						<li>
+							<strong>API: </strong>{' '}
+							<a href="https://chat-app-be-17fu.onrender.com" target="_blank">
+								https://chat-app-be-17fu.onrender.com
+							</a>
+						</li>
 					</ul>
 				</div>
 			</div>

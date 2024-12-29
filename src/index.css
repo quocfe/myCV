@@ -12,3 +12,12 @@ body {
 	color: white;
 	font-weight: bold;
 }
+
+.cv_section {
+	display: flex;
+	flex-direction: column;
+	height: 100vh;
+	margin-top: auto;
+	margin-bottom: auto;
+	justify-content: center;
+}
