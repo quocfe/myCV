@@ -1,9 +1,13 @@
-import { CreditCardIcon, MapIcon } from '@heroicons/react/24/outline';
+import {
+	CreditCardIcon,
+	DevicePhoneMobileIcon,
+	MapIcon,
+} from '@heroicons/react/24/outline';
 import { emailImage, githubImage, linkedinImage } from '../../assets';
 
 function About() {
 	return (
-		<section className="p-12 border-b cv_section">
+		<section className="cv_section">
 			<div className="leading-normal text-left mb-6">
 				<h3 className="text-6xl font-bold uppercase text-gray-600 mb-4 ">
 					Nguyen Phu <span className="text-[#56cdc7]">Quoc</span>
@@ -43,7 +47,11 @@ function About() {
 					</p>
 				</div>
 			</div>
-			<div className="mb-6 text-[17px] italic">
+			<div className="mb-6 lg:text-[17px] text-[16px] italic">
+				<div className="flex gap-2 items-center">
+					<DevicePhoneMobileIcon className="size-5" />
+					<p>0383995412</p>
+				</div>
 				<div className="flex gap-2 items-center">
 					<img src={emailImage} className="w-5 h-5" />
 					<p className="underline">phuquocfe@gmail.com</p>

@@ -2,7 +2,7 @@ import HSection from '../HSection/HSection';
 
 const Interests = () => {
 	return (
-		<section className="p-12 border-b cv_section">
+		<section className=" cv_section">
 			<HSection>Interests</HSection>
 			<div className="mt-5 text-[18px]">
 				<p className="mb-3">

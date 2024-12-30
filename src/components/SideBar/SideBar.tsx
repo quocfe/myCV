@@ -79,8 +79,9 @@ const SideBar: React.FC<SideBarProps> = ({
 								</button>
 							</li>
 						))}
+
 						<li className="p-2 text-[20px] text-[#ffeaa7] font-[600] flex items-center gap-2">
-							<a download href="">
+							<a download href="./public/NGUYEN_PHU_QUOC_CV.pdf">
 								Download PDF
 							</a>
 							<ArrowDownOnSquareIcon className="size-6 font-bold" />

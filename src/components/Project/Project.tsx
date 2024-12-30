@@ -6,7 +6,7 @@ function Project() {
 	// const [showDes, setShowDes] = useState<boolean>(true);
 	// const [showDes1, setShowDes1] = useState<boolean>(true);
 	return (
-		<section className="p-12 border-b">
+		<section className="cv_section">
 			<HSection>Projects</HSection>
 			<div className="mb-6">
 				<HeaderProject

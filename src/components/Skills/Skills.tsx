@@ -4,7 +4,7 @@ import WorkFlow from './components/WorkFlow';
 
 function Skills() {
 	return (
-		<section className="p-12 border-b cv_section">
+		<section className="cv_section">
 			<HSection>Skills</HSection>
 
 			<LanguagesAndTool />

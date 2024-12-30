@@ -2,7 +2,7 @@ import HSection from '../HSection/HSection';
 
 const Education = () => {
 	return (
-		<section className="p-12 border-b cv_section">
+		<section className="cv_section">
 			<HSection>Education</HSection>
 			<div className="flex-wrap lg:flex w-full items-center mb-4">
 				<h3 className="font-bold text-2xl text-[#4db4af] flex-1">

@@ -16,8 +16,16 @@ body {
 .cv_section {
 	display: flex;
 	flex-direction: column;
-	height: 100vh;
 	margin-top: auto;
 	margin-bottom: auto;
 	justify-content: center;
+	padding: 48px;
+	border-bottom: 1px solid #a3a3a3;
+}
+
+@media (max-width: 500px) {
+	.cv_section {
+		height: auto;
+		padding: 36px;
+	}
 }
