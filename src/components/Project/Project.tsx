@@ -43,18 +43,24 @@ function Project() {
 						<strong className="font-bold">Responsibility:</strong>
 					</p>
 					<ul className="list-disc ml-10">
-						<li>Build and develop API with NestJs..</li>
 						<li>
-							Implemented database schema using Prisma ORM and MySQL, optimizing
-							data relationships for product categories, orders, and users.
+							Developed and optimized APIs using NestJS to manage products,
+							orders, and users
 						</li>
 						<li>
-							Developed secure user authentication and authorization workflows
-							with JWT, supporting role-based access control (super-admin,
+							Developed and optimized APIs using NestJS to manage products,
+							orders, and users
+						</li>
+						<li>
+							Built secure user authentication and authorization workflows with
+							JWT, supporting role-based access control (super-admin,
 							management, customer).
 						</li>
 						<li>Integrated Cloudinary for product image storage</li>
-						<li>Designed and implemented a background email queue</li>
+						<li>
+							Implemented a background email processing system using Redis and
+							BullMQ to ensure efficient email delivery
+						</li>
 						<li>
 							Build a cms system to manage products, product categories, orders,
 							and users
@@ -97,9 +103,9 @@ function Project() {
 				</div>
 				<div>
 					<p className="indent-6">
-						<strong className="font-bold">Overview: </strong> Develop a social
-						media platform that allows users to interact through posts, connect
-						with friends, and send messages.
+						<strong className="font-bold">Overview: </strong> A social media
+						platform enabling users to connect, share posts, and communicate
+						through messaging.
 					</p>
 				</div>
 				<div>
@@ -121,16 +127,26 @@ function Project() {
 						other technologies.
 					</p>
 					<ul className="list-disc ml-10">
-						<li>Developed messaging API and designed the database</li>
 						<li>
-							Implemented real-time messaging with Socket.IO (messages,
-							attachments, voice messages, video calls)
+							Designed and developed messaging APIs using Node.js and
+							Express.js, supporting real-time interactions with Socket.IO.
 						</li>
 						<li>
-							Integrated user status (online/offline) and media handling
-							(images, videos)
+							Designed MySQL database schema with Sequelize ORM to manage users,
+							messages, and media efficiently
 						</li>
-						<li>Built video call functionality using WebRTC</li>
+						<li>
+							Built features for online/offline user status and integrated media
+							handling for images and videos
+						</li>
+						<li>
+							Implemented WebRTC for video calling functionality and integrated
+							with the messaging system
+						</li>
+						<li>
+							Secured API endpoints with JWT and ensured reliable media storage
+							using Cloudinary.
+						</li>
 					</ul>
 				</div>
 				<div>
@@ -170,8 +186,9 @@ function Project() {
 				</div>
 				<div>
 					<p className="indent-6">
-						<strong className="font-bold">Overview: </strong> Provide a platform
-						for book readers to view reviews before deciding to buy.
+						<strong className="font-bold">Overview: </strong> • Secured API
+						endpoints with JWT and ensured reliable media storage using
+						Cloudinary.
 					</p>
 				</div>
 				<div>
@@ -185,26 +202,28 @@ function Project() {
 				</div>
 				<div>
 					<p className="indent-6">
-						<strong className="font-bold">Responsibility:</strong> I'm
-						responsible for developing full websites with ReactJS, Nodejs, and
-						other
+						<strong className="font-bold">Responsibility:</strong>
 					</p>
 					<ul className="list-disc ml-10">
 						<li>
-							Develop the backend using Node.js and create RESTful APIs to
-							communicate with the frontend.
+							Developed back-end using Node.js and Express.js, providing RESTful
+							APIs for core functionalities like user authentication, product
+							management, and reviews.
 						</li>
 						<li>
-							Design the frontend interface with React.js and manage application
-							state using Redux.
+							Designed and optimized the MySQL database schema to manage
+							products, categories, reviews, and users efficiently.
 						</li>
 						<li>
-							Developed secure user authentication and authorization workflows
-							with JWT
+							Implemented secure authentication and authorization with JWT,
+							supporting role-based access for admins and users.
 						</li>
 						<li>
-							Build a cms system to manage products, product categories,
-							comments, and users
+							Built a CMS for managing books, categories, user comments, and
+							reviews
+						</li>
+						<li>
+							Integrated Cloudinary for handling image uploads and storage.
 						</li>
 					</ul>
 				</div>
@@ -267,20 +286,22 @@ function Project() {
 				</div>
 				<div>
 					<p className="indent-6">
-						<strong className="font-bold">Responsibility:</strong> I'm
-						responsible for developing full websites with ReactJS, Nodejs, and
-						other
+						<strong className="font-bold">Responsibility:</strong>
 					</p>
 					<ul className="list-disc ml-10">
 						<li>
-							Develop the backend using Node.js and create RESTful APIs to
-							communicate with the frontend.
+							Developed RESTful APIs with Node.js and Express.js for user
+							registration, authentication, and message management.
 						</li>
 						<li>
-							Design the frontend interface with React.js and manage application
-							state using Redux.
+							Integrated Socket.IO to enable real-time messaging, supporting
+							text and image messages.
 						</li>
-						<li>real-time messaging with socket</li>
+						<li>
+							Designed a MongoDB database schema with Mongoose to optimize
+							storage for messages and user statuses.
+						</li>
+						<li>Secured user data with JWT-based authentication workflows.</li>
 					</ul>
 				</div>
 				<div>
