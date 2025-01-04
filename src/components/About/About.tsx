@@ -4,8 +4,10 @@ import {
 	MapIcon,
 } from '@heroicons/react/24/outline';
 import { emailImage, githubImage, linkedinImage } from '../../assets';
+import { useTranslation } from 'react-i18next';
 
 function About() {
+	const { t } = useTranslation('about');
 	return (
 		<section className="cv_section">
 			<div className="leading-normal text-left mb-6">
@@ -22,15 +24,9 @@ function About() {
 				</div>
 			</div>
 			<div className="bg-[#d1ecf1] text-[#0c5460] px-4 py-2 mb-6 text-[18px] rounded-md border border-[#bee5eb]">
-				Hi there, welcome to look at my profile! I have 2 years of experience
-				working with JavaScript and 1 year with <strong>Node.js</strong>.
-				Additionally, I am familiar with frameworks like{' '}
-				<strong>ExpressJS</strong> and <strong>NestJS</strong>. I also have
-				knowledge of relational databases <strong>MySQL</strong> and NoSQL
-				<strong>MongoDB</strong>. My goal for the next 2 years is to become a
-				junior back-end developer
+				{t('about')}
 			</div>
-			<div className="mb-6 text-[18px]">
+			{/* <div className="mb-6 text-[18px]">
 				<div className="mb-2">
 					<p>
 						<strong>Back-end:</strong> I have experience working with{' '}
@@ -46,7 +42,7 @@ function About() {
 						<strong>ReactJS, Tailwind Hook, Redux</strong>...
 					</p>
 				</div>
-			</div>
+			</div> */}
 			<div className="mb-6 lg:text-[17px] text-[16px] italic">
 				<div className="flex gap-2 items-center">
 					<DevicePhoneMobileIcon className="size-5" />

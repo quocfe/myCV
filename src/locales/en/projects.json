@@ -1,0 +1,99 @@
+{
+	"heading": "Projects",
+	"powerkeentrend": {
+		"heading": {
+			"team_size": "Team size",
+			"position": "freelancer"
+		},
+		"overview": {
+			"title": "Overview",
+			"description": "E-commerce website selling hair wax"
+		},
+		"technologies": {
+			"title": "Technologies",
+			"description": {
+				"back-end": "NestJS, Redis, BullMq, Sequelize ORM",
+				"database": "MySQL"
+			}
+		},
+		"responsibility": {
+			"title": "Responsibility",
+			"description": [
+				"Developed and optimized APIs using NestJS to manage products, orders, and users",
+				"Built secure user authentication and authorization workflows with JWT, supporting role-based access control (super-admin, management, customer)",
+				"Integrated Cloudinary for product image storage",
+				"Implemented a background email processing system using Redis and BullMQ to ensure efficient email deliver",
+				"Build a cms system to manage products, product categories, orders, and users"
+			]
+		}
+	},
+	"devbook": {
+		"heading": {
+			"team_size": "Team size",
+			"position": "Graduation project"
+		},
+		"overview": {
+			"title": "Overview",
+			"description": "A social media platform enabling users to connect, share posts, and communicate through messaging."
+		},
+		"technologies": {
+			"title": "Technologies"
+		},
+		"responsibility": {
+			"title": "Responsibility",
+			"subtitle": "I'm responsible for developing message feature with ReactJS, Nodejs, and other technologies.",
+			"description": [
+				"Designed and developed messaging APIs using Node.js and Express.js, supporting real-time interactions with Socket.IO.",
+				"Designed MySQL database schema with Sequelize ORM to manage users, messages, and media efficiently",
+				"IBuilt features for online/offline user status and integrated media handling for images and videos",
+				"Implemented WebRTC for video calling functionality and integrated with the messaging system",
+				"Secured API endpoints with JWT and ensured reliable media storage using Cloudinary."
+			]
+		}
+	},
+	"bookreviewwebsite": {
+		"heading": {
+			"team_size": "Team size",
+			"position": "Personal project"
+		},
+		"overview": {
+			"title": "Overview",
+			"description": "A platform for book enthusiasts to explore reviews before making purchase decisions"
+		},
+		"technologies": {
+			"title": "Technologies"
+		},
+		"responsibility": {
+			"title": "Responsibility",
+			"description": [
+				"Developed back-end using Node.js and Express.js, providing RESTful APIs for core functionalities like user authentication, product management, and reviews.",
+				"Designed and optimized the MySQL database schema to manage products, categories, reviews, and users efficiently.",
+				"Implemented secure authentication and authorization with JWT, supporting role-based access for admins and users.",
+				"Built a CMS for managing books, categories, user comments, and reviews.",
+				"Integrated Cloudinary for handling image uploads and storage."
+			]
+		}
+	},
+	"chatapp": {
+		"heading": {
+			"team_size": "Team size",
+			"position": "Personal project"
+		},
+		"overview": {
+			"title": "Overview",
+			"description": "Provides a real-time messaging platform."
+		},
+		"technologies": {
+			"title": "Technologies"
+		},
+		"responsibility": {
+			"title": "Responsibility",
+			"description": [
+				"Developed RESTful APIs with Node.js and Express.js for user registration, authentication, and message management.",
+				"Integrated Socket.IO to enable real-time messaging, supporting text and image messages.",
+				"Designed a MongoDB database schema with Mongoose to optimize storage for messages and user statuses.",
+				"Secured user data with JWT-based authentication workflows."
+			]
+		}
+	}
+}

@@ -1,15 +1,20 @@
+import { useTranslation } from 'react-i18next';
 import HSection from '../HSection/HSection';
 
 const Interests = () => {
+	const { t } = useTranslation('interests');
+	const contents = t('interests.content', {
+		returnObjects: true,
+	}) as string[];
 	return (
 		<section className=" cv_section">
-			<HSection>Interests</HSection>
+			<HSection>{t('interests.title')}</HSection>
 			<div className="mt-5 text-[18px]">
-				<p className="mb-3">
-					Besides being a developer, I also spend a lot of my free time
-					listening to music, reading books, and running
-				</p>
-				<p>In addition, I enjoy making coffee for myself </p>
+				{contents.map((item, index) => (
+					<p key={index} className="mb-3">
+						{item}
+					</p>
+				))}
 			</div>
 		</section>
 	);

@@ -1,0 +1,99 @@
+{
+	"heading": "Dự án",
+	"powerkeentrend": {
+		"heading": {
+			"team_size": "Thành viên",
+			"position": "freelance"
+		},
+		"overview": {
+			"title": "Tổng quan",
+			"description": "Website thương mại điện tử bán sáp vuốt tóc"
+		},
+		"technologies": {
+			"title": "Công nghệ",
+			"description": {
+				"back-end": "NestJS, Redis, BullMq, Sequelize ORM",
+				"database": "MySQL"
+			}
+		},
+		"responsibility": {
+			"title": "Nhiệm vụ",
+			"description": [
+				"Phát triển và tối ưu API bằng NestJS để quản lý sản phẩm, đơn hàng và người dùng",
+				"Xây dựng quy trình xác thực và phân quyền người dùng an toàn bằng JWT, hỗ trợ kiểm soát truy cập theo vai trò (super-admin, quản lý, khách hàng)",
+				"Tích hợp Cloudinary để lưu trữ hình ảnh sản phẩm",
+				"Triển khai hệ thống xử lý email nền bằng Redis và BullMQ để đảm bảo việc gửi email hiệu quả",
+				"Xây dựng hệ thống CMS để quản lý sản phẩm, danh mục sản phẩm, đơn hàng và người dùng"
+			]
+		}
+	},
+	"devbook": {
+		"heading": {
+			"team_size": "Thành viên",
+			"position": "Dự án tốt nghiệp"
+		},
+		"overview": {
+			"title": "Tổng quan",
+			"description": "Một nền tảng mạng xã hội cho phép người dùng kết nối, chia sẻ bài viết và giao tiếp qua tin nhắn"
+		},
+		"technologies": {
+			"title": "Công nghệ"
+		},
+		"responsibility": {
+			"title": "Nhiệm vụ",
+			"subtitle": "Tôi chịu trách nhiệm phát triển tính năng tin nhắn với ReactJS, Node.js và các công nghệ khác.",
+			"description": [
+				"Thiết kế và phát triển API tin nhắn sử dụng Node.js và Express.js, hỗ trợ tương tác thời gian thực với Socket.IO.",
+				"hiết kế sơ đồ cơ sở dữ liệu MySQL với Sequelize ORM để quản lý người dùng, tin nhắn và media",
+				"Xây dựng tính năng trạng thái người dùng online/offline và tích hợp xử lý media cho hình ảnh và video.",
+				"Triển khai WebRTC cho tính năng gọi video và tích hợp với hệ thống tin nhắn.",
+				"Bảo mật các endpoint API với JWT và đảm bảo lưu trữ media bằng Cloudinary."
+			]
+		}
+	},
+	"bookreviewwebsite": {
+		"heading": {
+			"team_size": "Thành viên",
+			"position": "Dự án cá nhân"
+		},
+		"overview": {
+			"title": "Tổng quan",
+			"description": "Một nền tảng dành cho những người yêu sách để khám phá đánh giá trước khi đưa ra quyết định mua sắm"
+		},
+		"technologies": {
+			"title": "Công nghệ"
+		},
+		"responsibility": {
+			"title": "Trách nhiệm",
+			"description": [
+				"Phát triển back-end sử dụng Node.js và Express.js, cung cấp RESTful API cho các chức năng chính như xác thực người dùng, quản lý sản phẩm và đánh giá.",
+				"Thiết kế và tối ưu hóa sơ đồ cơ sở dữ liệu MySQL để quản lý sản phẩm, danh mục, đánh giá và người dùng một cách hiệu quả.",
+				"Triển khai xác thực và phân quyền bảo mật với JWT, hỗ trợ truy cập dựa trên vai trò cho admin và người dùng.",
+				"Xây dựng CMS để quản lý sách, danh mục, bình luận của người dùng và đánh giá.",
+				"Tích hợp Cloudinary để xử lý upload và lưu trữ hình ảnh."
+			]
+		}
+	},
+	"chatapp": {
+		"heading": {
+			"team_size": "Thành viên",
+			"position": "Dự án cá nhân"
+		},
+		"overview": {
+			"title": "Tổng quan",
+			"description": "Cung cấp một nền tảng nhắn tin thời gian thực."
+		},
+		"technologies": {
+			"title": "Công nghệ"
+		},
+		"responsibility": {
+			"title": "Trách nhiệm",
+			"description": [
+				"Phát triển RESTful API với Node.js và Express.js cho đăng ký người dùng, xác thực và quản lý tin nhắn.",
+				"Tích hợp Socket.IO để hỗ trợ nhắn tin thời gian thực, bao gồm tin nhắn văn bản và hình ảnh.",
+				"Thiết kế sơ đồ cơ sở dữ liệu MongoDB với Mongoose để tối ưu hóa lưu trữ tin nhắn và trạng thái người dùng.",
+				"Bảo mật dữ liệu người dùng với quy trình xác thực dựa trên JWT."
+			]
+		}
+	}
+}

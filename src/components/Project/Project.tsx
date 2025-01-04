@@ -1,13 +1,29 @@
 import { BookmarkIcon } from '@heroicons/react/24/solid';
 import HSection from '../HSection/HSection';
 import HeaderProject from './components/HeaderProject';
+import { useTranslation } from 'react-i18next';
 
 function Project() {
-	// const [showDes, setShowDes] = useState<boolean>(true);
-	// const [showDes1, setShowDes1] = useState<boolean>(true);
+	const { t } = useTranslation('projects');
+	const responsibilities = t('powerkeentrend.responsibility.description', {
+		returnObjects: true,
+	}) as string[];
+	const responsibilitiesDevbook = t('devbook.responsibility.description', {
+		returnObjects: true,
+	}) as string[];
+	const responsibilitiesBookReview = t(
+		'bookreviewwebsite.responsibility.description',
+		{
+			returnObjects: true,
+		}
+	) as string[];
+	const responsibilitiesChatApp = t('chatapp.responsibility.description', {
+		returnObjects: true,
+	}) as string[];
+
 	return (
 		<section className="cv_section">
-			<HSection>Projects</HSection>
+			<HSection> {t('heading')}</HSection>
 			<div className="mb-6">
 				<HeaderProject
 					title="Powerkeentrend"
@@ -18,20 +34,29 @@ function Project() {
 				/>
 				<div className="flex items-start gap-1 ">
 					<BookmarkIcon className="size-5 text-yellow-400" />
-					<HeaderProject
-						title="Powerkeentrend (Team size 2): freelancer"
-						sub={true}
-					/>
+					<HeaderProject title="Powerkeentrend: freelancer" sub={true} />
 				</div>
 				<div>
 					<p className="indent-6">
-						<strong className="font-bold">Overview: </strong> E-commerce website
-						selling hair wax
+						<strong className="font-bold">
+							{t('powerkeentrend.overview.title')}:
+						</strong>{' '}
+						{t('powerkeentrend.overview.description')}
 					</p>
 				</div>
 				<div>
 					<p className="indent-6">
-						<strong className="font-bold">Technologies: </strong>
+						<strong className="font-bold">
+							{t('powerkeentrend.heading.team_size')}:
+						</strong>{' '}
+						2
+					</p>
+				</div>
+				<div>
+					<p className="indent-6">
+						<strong className="font-bold">
+							{t('powerkeentrend.technologies.title')}:
+						</strong>
 					</p>
 					<ul className="list-disc ml-10">
 						<li>Back-end: NestJS, Redis, BullMq, Sequelize ORM.</li>
@@ -40,31 +65,14 @@ function Project() {
 				</div>
 				<div>
 					<p className="indent-6">
-						<strong className="font-bold">Responsibility:</strong>
+						<strong className="font-bold">
+							{t('powerkeentrend.responsibility.title')}:
+						</strong>
 					</p>
 					<ul className="list-disc ml-10">
-						<li>
-							Developed and optimized APIs using NestJS to manage products,
-							orders, and users
-						</li>
-						<li>
-							Developed and optimized APIs using NestJS to manage products,
-							orders, and users
-						</li>
-						<li>
-							Built secure user authentication and authorization workflows with
-							JWT, supporting role-based access control (super-admin,
-							management, customer).
-						</li>
-						<li>Integrated Cloudinary for product image storage</li>
-						<li>
-							Implemented a background email processing system using Redis and
-							BullMQ to ensure efficient email delivery
-						</li>
-						<li>
-							Build a cms system to manage products, product categories, orders,
-							and users
-						</li>
+						{responsibilities.map((item, index) => (
+							<li key={index}>{item}</li>
+						))}
 					</ul>
 				</div>
 				<div>
@@ -97,20 +105,31 @@ function Project() {
 				<div className="flex items-start gap-1 ">
 					<BookmarkIcon className="size-5 text-yellow-400" />
 					<HeaderProject
-						title="DevBook (Team size 5): graduation project"
+						title={`DevBook: ${t('devbook.heading.position')}`}
 						sub={true}
 					/>
 				</div>
 				<div>
 					<p className="indent-6">
-						<strong className="font-bold">Overview: </strong> A social media
-						platform enabling users to connect, share posts, and communicate
-						through messaging.
+						<strong className="font-bold">
+							{t('devbook.overview.title')}:
+						</strong>{' '}
+						{t('devbook.overview.description')}
 					</p>
 				</div>
 				<div>
 					<p className="indent-6">
-						<strong className="font-bold">Technologies: </strong>
+						<strong className="font-bold">
+							{t('devbook.heading.team_size')}:
+						</strong>{' '}
+						5
+					</p>
+				</div>
+				<div>
+					<p className="indent-6">
+						<strong className="font-bold">
+							{t('devbook.technologies.title')}
+						</strong>
 					</p>
 					<ul className="list-disc ml-10">
 						<li>Back-end: Node.js, ExpressJS, Sequelize ORM.</li>
@@ -122,31 +141,15 @@ function Project() {
 				</div>
 				<div>
 					<p className="indent-6">
-						<strong className="font-bold">Responsibility:</strong> I'm
-						responsible for developing message feature with ReactJS, Nodejs, and
-						other technologies.
+						<strong className="font-bold">
+							{t('devbook.responsibility.title')}:{' '}
+						</strong>
+						{t('devbook.responsibility.subtitle')}
 					</p>
 					<ul className="list-disc ml-10">
-						<li>
-							Designed and developed messaging APIs using Node.js and
-							Express.js, supporting real-time interactions with Socket.IO.
-						</li>
-						<li>
-							Designed MySQL database schema with Sequelize ORM to manage users,
-							messages, and media efficiently
-						</li>
-						<li>
-							Built features for online/offline user status and integrated media
-							handling for images and videos
-						</li>
-						<li>
-							Implemented WebRTC for video calling functionality and integrated
-							with the messaging system
-						</li>
-						<li>
-							Secured API endpoints with JWT and ensured reliable media storage
-							using Cloudinary.
-						</li>
+						{responsibilitiesDevbook.map((item, index) => (
+							<li key={index}>{item}</li>
+						))}
 					</ul>
 				</div>
 				<div>
@@ -180,20 +183,33 @@ function Project() {
 				<div className="flex items-start gap-1 ">
 					<BookmarkIcon className="size-5 text-yellow-400" />
 					<HeaderProject
-						title="Social Media Web Application (Team size 1): personal project"
+						title={`Book Review Website: ${t(
+							'bookreviewwebsite.heading.position'
+						)}`}
 						sub={true}
 					/>
 				</div>
 				<div>
 					<p className="indent-6">
-						<strong className="font-bold">Overview: </strong> • Secured API
-						endpoints with JWT and ensured reliable media storage using
-						Cloudinary.
+						<strong className="font-bold">
+							{t('bookreviewwebsite.overview.title')}:{' '}
+						</strong>
+						{t('bookreviewwebsite.overview.description')}
 					</p>
 				</div>
 				<div>
 					<p className="indent-6">
-						<strong className="font-bold">Technologies: </strong>
+						<strong className="font-bold">
+							{t('bookreviewwebsite.heading.team_size')}:
+						</strong>{' '}
+						1
+					</p>
+				</div>
+				<div>
+					<p className="indent-6">
+						<strong className="font-bold">
+							{t('bookreviewwebsite.technologies.title')}:{' '}
+						</strong>
 					</p>
 					<ul className="list-disc ml-10">
 						<li>Back-end: Express.js, Mysql2</li>
@@ -202,29 +218,14 @@ function Project() {
 				</div>
 				<div>
 					<p className="indent-6">
-						<strong className="font-bold">Responsibility:</strong>
+						<strong className="font-bold">
+							{t('bookreviewwebsite.responsibility.title')}:{' '}
+						</strong>
 					</p>
 					<ul className="list-disc ml-10">
-						<li>
-							Developed back-end using Node.js and Express.js, providing RESTful
-							APIs for core functionalities like user authentication, product
-							management, and reviews.
-						</li>
-						<li>
-							Designed and optimized the MySQL database schema to manage
-							products, categories, reviews, and users efficiently.
-						</li>
-						<li>
-							Implemented secure authentication and authorization with JWT,
-							supporting role-based access for admins and users.
-						</li>
-						<li>
-							Built a CMS for managing books, categories, user comments, and
-							reviews
-						</li>
-						<li>
-							Integrated Cloudinary for handling image uploads and storage.
-						</li>
+						{responsibilitiesBookReview.map((item, index) => (
+							<li key={index}>{item}</li>
+						))}
 					</ul>
 				</div>
 				<div>
@@ -257,26 +258,39 @@ function Project() {
 				<HeaderProject
 					title="Chat App"
 					positon="Full-stack developer"
-					time="5/2023 - 6/2023"
+					time="05/2023 - 06/2023"
 					className="mb-3"
 					href="https://chat-app-fe-green.vercel.app/"
 				/>
 				<div className="flex items-start gap-1 ">
 					<BookmarkIcon className="size-5 text-yellow-400" />
 					<HeaderProject
-						title="Chat App (Team size 1): personal project"
+						title={`Chat App: ${t('chatapp.heading.position')}`}
 						sub={true}
 					/>
 				</div>
 				<div>
 					<p className="indent-6">
-						<strong className="font-bold">Overview: </strong> Provides a
-						real-time messaging platform.
+						<strong className="font-bold">
+							{t('chatapp.overview.title')}:{' '}
+						</strong>
+						{t('chatapp.overview.description')}
 					</p>
 				</div>
 				<div>
 					<p className="indent-6">
-						<strong className="font-bold">Technologies: </strong>
+						<strong className="font-bold">
+							{t('chatapp.heading.team_size')}:
+						</strong>{' '}
+						1
+					</p>
+				</div>
+				<div>
+					<p className="indent-6">
+						<strong className="font-bold">
+							{' '}
+							{t('chatapp.technologies.title')}:{' '}
+						</strong>
 					</p>
 					<ul className="list-disc ml-10">
 						<li>Front-end: React.js, Redux, Axios, Socket.IO ...</li>
@@ -286,22 +300,14 @@ function Project() {
 				</div>
 				<div>
 					<p className="indent-6">
-						<strong className="font-bold">Responsibility:</strong>
+						<strong className="font-bold">
+							{t('chatapp.responsibility.title')}:{' '}
+						</strong>
 					</p>
 					<ul className="list-disc ml-10">
-						<li>
-							Developed RESTful APIs with Node.js and Express.js for user
-							registration, authentication, and message management.
-						</li>
-						<li>
-							Integrated Socket.IO to enable real-time messaging, supporting
-							text and image messages.
-						</li>
-						<li>
-							Designed a MongoDB database schema with Mongoose to optimize
-							storage for messages and user statuses.
-						</li>
-						<li>Secured user data with JWT-based authentication workflows.</li>
+						{responsibilitiesChatApp.map((item, index) => (
+							<li key={index}>{item}</li>
+						))}
 					</ul>
 				</div>
 				<div>
@@ -317,8 +323,11 @@ function Project() {
 						</li>
 						<li>
 							<strong>API: </strong>{' '}
-							<a href="https://chat-app-be-17fu.onrender.com" target="_blank">
-								https://chat-app-be-17fu.onrender.com
+							<a
+								href="https://chat-app-be-17fu.onrender.com/api-docs"
+								target="_blank"
+							>
+								https://chat-app-be-17fu.onrender.com/api-docs
 							</a>
 						</li>
 					</ul>

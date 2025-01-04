@@ -1,0 +1,15 @@
+{
+	"skills": {
+		"title": "Kỹ năng",
+		"programming": "Ngôn ngữ lập trình",
+		"tools": "Công cụ",
+		"workflow": {
+			"title": "Quy trình làm việc",
+			"git": "Git, Github, Sourcetree cho làm việc nhóm",
+			"english": {
+				"title": "Tiếng Anh cho công việc!",
+				"reading": "Đọc hiểu: Tôi có thể thoải mái đọc và diễn giải tài liệu, đặc tả dự án và làm việc hoàn toàn bằng tiếng Anh."
+			}
+		}
+	}
+}

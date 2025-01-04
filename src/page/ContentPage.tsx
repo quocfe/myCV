@@ -2,7 +2,11 @@ import { ArrowUpIcon } from '@heroicons/react/24/outline';
 import { useEffect, useRef, useState } from 'react';
 
 interface ContentPageProps {
-	sections: { id: string; label: string; component: JSX.Element }[];
+	sections: {
+		id: string;
+		label: string;
+		component: JSX.Element;
+	}[];
 	sectionRefs: React.MutableRefObject<HTMLDivElement[]>;
 }
 

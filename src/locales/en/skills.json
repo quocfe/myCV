@@ -1,0 +1,15 @@
+{
+	"skills": {
+		"title": "Skills",
+		"programming": "Programming Languages",
+		"tools": "Tools",
+		"workflow": {
+			"title": "Workflow",
+			"git": "Git, Github, Sourcetree for Teamwork",
+			"english": {
+				"title": "English for Work!",
+				"reading": "For Reading: I can comfortably read and interpret documentation, project specifications, and work totally in English."
+			}
+		}
+	}
+}

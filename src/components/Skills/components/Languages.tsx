@@ -1,3 +1,5 @@
+import { useTranslation } from 'react-i18next';
+
 const IconArr = [
 	'devicon-javascript-plain',
 	'devicon-typescript-plain',
@@ -6,21 +8,17 @@ const IconArr = [
 	'devicon-nestjs-original',
 	'devicon-mongodb-plain',
 	'devicon-mysql-plain-wordmark',
-	'devicon-html5-plain',
-	'devicon-css3-plain',
+	'devicon-react-original-wordmark',
 	'devicon-tailwindcss-original',
-	'devicon-github-original ',
-	'devicon-sourcetree-original-wordmark',
 	'devicon-bootstrap-plain',
 ];
 
-function LanguagesAndTool() {
+function Languages() {
+	const { t } = useTranslation('skills');
 	return (
 		<div className="mb-3">
-			<h4 className="mb-5 text-[22px] font-bold">
-				Programming Languages & Tools
-			</h4>
-			<div className="flex flex-wrap gap-6 mb-5">
+			<h4 className="mb-5 text-[22px] font-bold">{t('skills.programming')}</h4>
+			<div className=" flex flex-wrap gap-6 mb-5 relative">
 				{IconArr.map((icon, index) => (
 					<i key={index} className={`${icon} colored text-[50px]`}></i>
 				))}
@@ -29,4 +27,4 @@ function LanguagesAndTool() {
 	);
 }
 
-export default LanguagesAndTool;
+export default Languages;

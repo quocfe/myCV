@@ -6,6 +6,8 @@ import {
 import { useEffect, useState } from 'react';
 import useViewport from '../../hooks/useViewPort';
 import ImagePreview from './ImagePreview';
+import { useTranslation } from 'react-i18next';
+import LanguageToggle from './LanguageToggle';
 
 interface SideBarProps {
 	currentHash: string;
@@ -19,6 +21,7 @@ const SideBar: React.FC<SideBarProps> = ({
 	currentHash,
 }) => {
 	const { width } = useViewport();
+	const { t } = useTranslation('sidebar');
 	const [activeMobileButton, setActiveMobileButton] = useState<boolean>(false);
 	const [isMobile, setIsMobile] = useState<boolean>(width < 1024);
 	useEffect(() => {
@@ -75,7 +78,7 @@ const SideBar: React.FC<SideBarProps> = ({
 										currentHash == section.id ? 'active' : ''
 									} }`}
 								>
-									{section.label}
+									{t(section.label)}
 								</button>
 							</li>
 						))}
@@ -88,6 +91,9 @@ const SideBar: React.FC<SideBarProps> = ({
 						</li>
 					</ul>
 				</div>
+			</div>
+			<div className="flex lg:justify-between justify-center items-center lg:flex-col-reverse ">
+				<LanguageToggle />
 			</div>
 		</div>
 	);
