@@ -3,7 +3,7 @@ function Profile() {
 		<section id="profile" className="pt-8 mx-8 mb-24 lg:mx-32">
 			<div className="mx-auto w-[275px] mb-4">
 				<img
-					src="https://res.cloudinary.com/dilajt5zl/image/upload/v1724900859/uploads/srguzidj9raxxmxk6kwe.jpg"
+					src="https://res.cloudinary.com/lazedafpoly/image/upload/v1736582383/k3jcepgdmyjmhpvdutto.jpg"
 					className=" w-full h-[275px] object-cover rounded-full"
 				/>
 			</div>

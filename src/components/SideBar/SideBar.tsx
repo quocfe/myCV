@@ -47,7 +47,7 @@ const SideBar: React.FC<SideBarProps> = ({
 						<ImagePreview
 							className=" w-full h-full object-cover rounded-full "
 							alt="image"
-							src="https://res.cloudinary.com/dilajt5zl/image/upload/v1724900859/uploads/srguzidj9raxxmxk6kwe.jpg"
+							src="https://res.cloudinary.com/lazedafpoly/image/upload/v1736582383/k3jcepgdmyjmhpvdutto.jpg"
 						/>
 					</div>
 				)}
