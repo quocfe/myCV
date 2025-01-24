@@ -1,13 +1,11 @@
 import {
-	ArrowDownOnSquareIcon,
 	BarsArrowDownIcon,
 	BarsArrowUpIcon,
 } from '@heroicons/react/24/outline';
 import { useEffect, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import useViewport from '../../hooks/useViewPort';
 import ImagePreview from './ImagePreview';
-import { useTranslation } from 'react-i18next';
-import LanguageToggle from './LanguageToggle';
 
 interface SideBarProps {
 	currentHash: string;
@@ -40,7 +38,7 @@ const SideBar: React.FC<SideBarProps> = ({
 	};
 
 	return (
-		<div className="bg-[#56cdc7] lg:fixed lg:w-[300px] lg:h-full w-full p-3">
+		<div className="bg-[#56cdc7] lg:fixed lg:w-[300px] lg:h-full w-full p-3 relative">
 			<div className="flex items-center justify-end lg:justify-center mb-2 lg:mt-[120px]">
 				{!isMobile && (
 					<div className="h-[150px] w-[150px] border-4 border-white  rounded-full overflow-hidden cursor-pointer">
@@ -83,18 +81,18 @@ const SideBar: React.FC<SideBarProps> = ({
 							</li>
 						))}
 
-						<li className="p-2 text-[20px] text-[#ffeaa7] font-[600] flex items-center gap-2">
+						{/* <li className="p-2 text-[20px] text-[#ffeaa7] font-[600] flex items-center gap-2">
 							<a download href="./public/NGUYEN_PHU_QUOC_CV.pdf">
 								Download PDF
 							</a>
 							<ArrowDownOnSquareIcon className="size-6 font-bold" />
-						</li>
+						</li> */}
 					</ul>
 				</div>
 			</div>
-			<div className="flex lg:justify-between justify-center items-center lg:flex-col-reverse ">
+			{/* <div className="absolute top-0 lg:static lg:flex lg:justify-between justify-center lg:items-center lg:flex-col-reverse ">
 				<LanguageToggle />
-			</div>
+			</div> */}
 		</div>
 	);
 };

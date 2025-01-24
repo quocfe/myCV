@@ -95,5 +95,25 @@
 				"Secured user data with JWT-based authentication workflows."
 			]
 		}
+	},
+	"todoapp": {
+		"heading": {
+			"team_size": "Team size",
+			"position": "Personal project"
+		},
+		"overview": {
+			"title": "Overview",
+			"description": "Todo App is a simple and efficient application that helps users manage their daily tasks. It allows users to create, read, update, and delete tasks."
+		},
+		"technologies": {
+			"title": "Technologies"
+		},
+		"responsibility": {
+			"title": "Responsibility",
+			"description": [
+				"Developed RESTful APIs with Golang and Fiber.",
+				"CURD operations for managing tasks."
+			]
+		}
 	}
 }

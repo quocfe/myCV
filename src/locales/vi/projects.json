@@ -95,5 +95,22 @@
 				"Bảo mật dữ liệu người dùng với quy trình xác thực dựa trên JWT."
 			]
 		}
+	},
+	"todoapp": {
+		"heading": {
+			"team_size": "Thành viên",
+			"position": "Dự án cá nhân"
+		},
+		"overview": {
+			"title": "Tổng quan",
+			"description": "Là một ứng dụng đơn giản và hiệu quả giúp người dùng quản lý công việc hàng ngày của mình. Nó cho phép người dùng tạo, đọc, cập nhật và xóa các tác vụ."
+		},
+		"technologies": {
+			"title": "Công nghệ"
+		},
+		"responsibility": {
+			"title": "Trách nhiệm",
+			"description": ["Xây dựng RESTful API với Golang và Fiber."]
+		}
 	}
 }

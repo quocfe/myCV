@@ -1,25 +1,18 @@
 import { BookmarkIcon } from '@heroicons/react/24/solid';
+import { useTranslation as ut } from 'react-i18next';
+import useTranslation from '../../hooks/useTranslation';
 import HSection from '../HSection/HSection';
 import HeaderProject from './components/HeaderProject';
-import { useTranslation } from 'react-i18next';
 
 function Project() {
-	const { t } = useTranslation('projects');
-	const responsibilities = t('powerkeentrend.responsibility.description', {
-		returnObjects: true,
-	}) as string[];
-	const responsibilitiesDevbook = t('devbook.responsibility.description', {
-		returnObjects: true,
-	}) as string[];
-	const responsibilitiesBookReview = t(
-		'bookreviewwebsite.responsibility.description',
-		{
-			returnObjects: true,
-		}
-	) as string[];
-	const responsibilitiesChatApp = t('chatapp.responsibility.description', {
-		returnObjects: true,
-	}) as string[];
+	const {
+		responsibilities,
+		responsibilitiesBookReview,
+		responsibilitiesChatApp,
+		responsibilitiesDevbook,
+		// responsibilitiesTodoApp,
+	} = useTranslation();
+	const { t } = ut('projects');
 
 	return (
 		<section className="cv_section">
@@ -88,8 +81,8 @@ function Project() {
 						</li>
 						<li>
 							<strong>Api: </strong>
-							<a href="https://powerkeentrend.com/api-docs" target="_blank">
-								https://powerkeentrend.com/api-docs
+							<a href="https://powerkeentrend.com/api/api-docs" target="_blank">
+								https://powerkeentrend.com/api/api-docs
 							</a>
 						</li>
 					</ul>
@@ -333,6 +326,80 @@ function Project() {
 					</ul>
 				</div>
 			</div>
+			{/* todoapp golang */}
+			{/* <div className="mb-6">
+				<HeaderProject
+					title="TodoApp"
+					positon="Full-stack developer"
+					time=""
+					className="mb-3"
+					href="https://golangtodoapp-production.up.railway.app/"
+				/>
+				<div className="flex items-start gap-1 ">
+					<BookmarkIcon className="size-5 text-yellow-400" />
+					<HeaderProject
+						title={`TodoApp: ${t('todoapp.heading.position')}`}
+						sub={true}
+					/>
+				</div>
+				<div>
+					<p className="indent-6">
+						<strong className="font-bold">
+							{t('todoapp.overview.title')}:{' '}
+						</strong>
+						{t('todoapp.overview.description')}
+					</p>
+				</div>
+				<div>
+					<p className="indent-6">
+						<strong className="font-bold">
+							{t('todoapp.heading.team_size')}:
+						</strong>{' '}
+						1
+					</p>
+				</div>
+				<div>
+					<p className="indent-6">
+						<strong className="font-bold">
+							{' '}
+							{t('todoapp.technologies.title')}:{' '}
+						</strong>
+					</p>
+					<ul className="list-disc ml-10">
+						<li>Front-end: React.js, React-query, Chakra-ui</li>
+						<li>Back-end: Go, Fiber, mongodb driver</li>
+						<li>Database: MongoDB</li>
+					</ul>
+				</div>
+				<div>
+					<p className="indent-6">
+						<strong className="font-bold">
+							{t('todoapp.responsibility.title')}:{' '}
+						</strong>
+					</p>
+					<ul className="list-disc ml-10">
+						{responsibilitiesTodoApp.map((item, index) => (
+							<li key={index}>{item}</li>
+						))}
+					</ul>
+				</div>
+				<div>
+					<p className="indent-6">
+						<strong className="font-bold">Demo</strong>
+					</p>
+					<ul className="list-disc ml-10">
+						<li>
+							<strong>Website: </strong>{' '}
+							<a
+								href="https://golangtodoapp-production.up.railway.app/"
+								target="_blank"
+							>
+								https://golangtodoapp-production.up.railway.app/
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div> */}
 		</section>
 	);
 }

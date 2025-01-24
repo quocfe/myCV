@@ -45,6 +45,7 @@ function App() {
 
 		// Dọn dẹp observer khi component bị unmount
 		return () => {
+			// eslint-disable-next-line react-hooks/exhaustive-deps
 			sectionRefs.current.forEach((section) => {
 				if (section) observer.unobserve(section);
 			});
